@@ -20,7 +20,7 @@ function createWindow() {
       slashes: true
     }))
   } else {
-    // 开发目录
+    // 开发目录123
     mainWindow.loadURL('http://localhost:3000/');
   }
 
