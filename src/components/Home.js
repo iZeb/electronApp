@@ -10,10 +10,6 @@ export default class Home extends Component {
       <div>
         <Title></Title>
         <LeftPage/>
-        <div data-tid="container">
-          <h2>Home</h2>
-          <Link to="/counter">to Counter</Link>
-        </div>
       </div>
     );
   }

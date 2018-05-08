@@ -4,4 +4,12 @@
 .left_page{
   width: 280px;
   padding: 6px;
+  .top_container{
+    &>img{
+      width: 100%;
+    }
+  }
+  .bottom_container{
+
+  }
 }
