@@ -7,7 +7,7 @@ const url = require('url')
 let mainWindow
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 1200, height: 770, frame: false})
 
   /*
    * 加载应用
@@ -31,7 +31,12 @@ function createWindow() {
   mainWindow.on('closed', function () {
     mainWindow = null
   })
+  // 检查更新
   // update.updateHandle(mainWindow)
+  // 监听关闭窗口事件
+  ipc.on('closeWindow', function () {
+    app.quit()
+  })
 }
 
 // 当 Electron 完成初始化并准备创建浏览器窗口时调用此方法
