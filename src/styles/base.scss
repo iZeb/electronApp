@@ -1,0 +1,12 @@
+@import './reset.css';
+@import './variables.css';
+@import './mixin.css';
+@import './vender/antd.css';
+@import './vender/nprogress.css';
+
+/* 浮动公共样式 */
+.left{ float:left; _display:inline; }
+.right{ float:right; _display:inline; }
+.clear:after{ display:block; content:''; clear:both;}
+.clear{ zoom:1;}
+.hover{ cursor: pointer; }
