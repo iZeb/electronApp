@@ -25,7 +25,7 @@ export default class LeftPage extends Component {
                         </li>
                         <li>
                             账户余额：￥888888.888888
-                            <span className="hover hover_line right">隐藏</span>
+                            <span className="hide_balance hover hover_line right">隐藏</span>
                         </li>
                     </ul>
                 </div>

@@ -1,5 +1,5 @@
-@import '../../styles/variables.css';
-@import '../../styles/mixin.css';
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
 
 .left_page{
   width: 280px;
@@ -7,6 +7,9 @@
   .top_container{
     &>img{
       width: 100%;
+    }
+    .hide_balance{
+      color: $text-color;
     }
   }
   .bottom_container{

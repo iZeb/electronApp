@@ -1,8 +1,8 @@
-@import './reset.css';
-@import './variables.css';
-@import './mixin.css';
-@import 'vender/antd';
-@import 'vender/nprogress';
+@import './reset.scss';
+@import './variables.scss';
+@import './mixin.scss';
+@import 'vender/antd.scss';
+@import 'vender/nprogress.scss';
 
 /* 浮动公共样式 */
 .left{ float:left; _display:inline; }
