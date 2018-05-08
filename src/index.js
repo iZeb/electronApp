@@ -1,16 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom'
-import './Css/index.css';
-import registerServiceWorker from './registerServiceWorker';
-import Routers from './Route/index'
+import {render} from 'react-dom';
+import Root from './containers/Root';
+import {rootStore as store, history} from './store';
+import './app.global.css';
 
-ReactDOM.render(
-  <BrowserRouter>
-    <div>
-      {Routers()}
-    </div>
-  </BrowserRouter>,
-  document.getElementById('root')
-)
-registerServiceWorker();
+
+render(
+    <Root store={store} history={history}/>,
+    document.getElementById('root')
+);
