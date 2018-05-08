@@ -1,6 +1,8 @@
 import React from 'react'
 import './index.css'
 
+// const ipcRenderer = require('electron').ipcRenderer
+
 
 export default class Title extends React.Component {
   constructor(props) {
