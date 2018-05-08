@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import Root from './containers/Root';
 import {rootStore as store, history} from './store';
-import './app.global.css';
+import './styles/app.global.css';
 
 
 render(

@@ -3,7 +3,7 @@ import {Provider, inject, observer} from 'mobx-react';
 import {RouterStore, syncHistoryWithStore} from 'mobx-react-router';
 import {Router} from 'react-router';
 
-import Routes from '../routes';
+import Routes from '../routes/routes';
 
 export default function Root({store, history}) {
   return (
