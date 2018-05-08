@@ -1,41 +1,26 @@
-import { observable, action, runInAction } from 'mobx';
+import { extendObservable, observable, action, runInAction, computed } from 'mobx';
 import { createHashHistory } from 'history';
 
-class RootStore{
-  constructor(){
-    this.counter = new Counter(this);
-  }
+// useStrict(true);
+class RootStore {
+    constructor() {
+        this.counter = new Counter(this);
+    }
 }
 
 class Counter {
-    constructor(){
-      // this.count = 1;
+    constructor() {
+        extendObservable(this, {
+            count: 0,
+        });
     }
-
-    @observable count = 1;
     @action.bound
-    increment(){
-        console.log(this)
+    increment() {
         this.count++;
     }
-
     @action.bound
-    decrement(){
+    decrement() {
         this.count--;
-    }
-    @action.bound
-    incrementIfOdd(){
-        if(this.count % 2 == 0){
-            this.count++
-        }
-    }
-    @action.bound
-    incrementAsync(){
-        setTimeout(() => {
-            runInAction('async add count',() => {
-                this.count++;
-            })
-        }, 1000);
     }
 }
 

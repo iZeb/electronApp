@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import { inject, observer } from "mobx-react";
 import styles from "./Counter.css";
 
-
 @inject(root => ({ counter: root.counter }))
 @observer
-class Counter extends Component {
+export default class Counter extends Component {
+    // constructor(props) {
+    //     super(props);
+    // };
   render() {
-    console.log(this.props.counter.count);
+    console.log(this.props);
     const {
       increment,
-      incrementIfOdd,
-      incrementAsync,
       decrement,
       count
     } = this.props.counter;
@@ -28,24 +28,8 @@ class Counter extends Component {
           <button onClick={decrement}>
             减
           </button>
-          <button
-            className={styles.btn}
-            onClick={incrementIfOdd}
-            data-tclass="btn"
-          >
-            odd
-          </button>
-          <button
-            className={styles.btn}
-            onClick={() => incrementAsync()}
-            data-tclass="btn"
-          >
-            async
-          </button>
         </div>
       </div>
     );
   }
 }
-
-export default Counter;
